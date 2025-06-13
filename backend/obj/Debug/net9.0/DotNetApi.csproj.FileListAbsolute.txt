@@ -72,3 +72,4 @@
 /Users/codingdesign_mori/Desktop/work/_study/nextjs_dotnet_web_api/backend/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/codingdesign_mori/Desktop/work/_study/nextjs_dotnet_web_api/backend/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
 /Users/codingdesign_mori/Desktop/work/_study/nextjs_dotnet_web_api/backend/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/codingdesign_mori/Desktop/work/_study/nextjs_dotnet_web_api/backend/obj/Debug/net9.0/DotNetApi.sourcelink.json
