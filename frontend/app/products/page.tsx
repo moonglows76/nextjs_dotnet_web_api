@@ -13,23 +13,6 @@ export default function Products() {
   const [loading, setLoading] = useState<boolean>(true);
   const [token, setToken] = useState<string | null>(null);
 
-  const fetchProducts = async () => {
-    if (!token) return;
-    try {
-      const response = await fetch('http://localhost:5225/api/products', {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      const data = await response.json();
-      setProducts(data);
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     const authenticate = async () => {
       try {
@@ -51,6 +34,22 @@ export default function Products() {
 
   useEffect(() => {
     if (token) {
+      const fetchProducts = async () => {
+        if (!token) return;
+        try {
+          const response = await fetch('http://localhost:5225/api/products', {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          });
+          const data = await response.json();
+          setProducts(data);
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
       fetchProducts();
     }
   }, [token]);
